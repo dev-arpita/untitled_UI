@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+
+    <body>
+        <!-- desktop view -->
+        <header class="flex justify-between items-center gap-2 md:px-12 md:py-3">
+            <!-- nav -->
+            <nav class="flex justify-between items-center gap-8">
+                <!-- logo -->
+                    <a href="#" class="flex gap-2">
+                        <span class="text-3xl">😇</span>
+                        <h1 class="text-3xl font-bold ">
+                            Untitled UI
+                        </h1>
+                    </a>
+                <!-- menu -->
+                <ul class="hidden md:flex justify-around items-center gap-8">
+                    <li><a href="#" class="text-teal-600">Home</a></li>
+                    <li><a href="#" class="">About</a></li>
+                    <li><a href="#" class="">Contact Us</a></li>
+                    <li><a href="#" class="px-4 py-2 bg-teal-600 text-white uppercase font-bold rounded-full">subscribe</a></li>
+                </ul>
+            </nav>
+                <!-- authentication / authorisation -->
+                <ul class="flex justify-between items-center gap-6">
+                    <li><a href="#" class="text-gray-800">Log In</a></li>
+                    <li><a href="#" class="bg-black text-white px-4 py-2 rounded-full">Sign up</a></li>
+                </ul>  
+                <a href="" class="ml-auto">
+                    <img src="menu.svg" alt="menu button">
+                </a>
+        </header>
+        <!-- mobile view -->
+        <aside class="md:hidden flex justify-between items-center px-12 py-3">
+            <!-- nav -->
+            <nav class="flex justify-between items-center gap-8">
+                <!-- logo -->
+                <div class="flex-1 flex">
+                    <span>😇</span>
+                    <h1 class="text-3xl font-bold ">
+                        Untitled UI
+                    </h1>
+                </div>
+                <!-- menu -->
+                <ul class=" flex justify-around items-center gap-8">
+                    <li><a href="#" class="text-teal-600">Home</a></li>
+                    <li><a href="#" class="">About</a></li>
+                    <li><a href="#" class="">Contact Us</a></li>
+                    <li><a href="#" class="px-4 py-2 bg-teal-600 text-white uppercase font-bold rounded-full">subscribe</a></li>
+                </ul>
+            </nav>
+            <!-- authentication / authorisation -->
+            <ul class="flex justify-between items-center gap-6">
+                <li><a href="#" class="text-gray-800">Log In</a></li>
+                <li><a href="#" class="bg-black text-white px-4 py-2 rounded-full">Sign up</a></li>
+            </ul>
+        </aside>
+        
+    </body>
+
+</html>
