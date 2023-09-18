@@ -7,61 +7,84 @@
         <script src="https://cdn.tailwindcss.com"></script>
     </head>
 
-    <body>
+    <body class="relative">
         <!-- desktop view -->
-        <header class="flex justify-between items-center gap-2 md:px-12 md:py-3">
+        <header class="flex justify-between items-center gap-2 py-4 px-6 md:px-12 md:py-3">
             <!-- nav -->
-            <nav class="flex justify-between items-center gap-8">
+            <nav class="flex justify-between items-center gap-28">
                 <!-- logo -->
                     <a href="#" class="flex gap-2">
                         <span class="text-3xl">😇</span>
-                        <h1 class="text-3xl font-bold ">
+                        <div class="text-3xl font-bold ">
                             Untitled UI
-                        </h1>
+                        </div>
                     </a>
                 <!-- menu -->
+                <span class="w-5 md:hidden" id="menu-btn">
+                    <img src="menu.svg" alt="menu button">
+                </span>
                 <ul class="hidden md:flex justify-around items-center gap-8">
                     <li><a href="#" class="text-teal-600">Home</a></li>
-                    <li><a href="#" class="">About</a></li>
-                    <li><a href="#" class="">Contact Us</a></li>
-                    <li><a href="#" class="px-4 py-2 bg-teal-600 text-white uppercase font-bold rounded-full">subscribe</a></li>
+                    <li><a href="#" class="">Products</a></li>
+                    <li><a href="#" class="">Resources</a></li>
+                    <li><a href="#" class="">Pricing</a></li>
+                    <!-- <li><a href="#" class="px-4 py-2 bg-teal-600 text-white uppercase font-bold rounded-full">subscribe</a></li> -->
                 </ul>
             </nav>
                 <!-- authentication / authorisation -->
-                <ul class="flex justify-between items-center gap-6">
-                    <li><a href="#" class="text-gray-800">Log In</a></li>
-                    <li><a href="#" class="bg-black text-white px-4 py-2 rounded-full">Sign up</a></li>
+                <ul class="hidden md:flex justify-between items-center gap-6">
+                    <li><a href="#" class="text-gray-800 text-lg">Log In</a></li>
+                    <li class="w-0.5 h-8 origin-top-left rotate-12 bg-gray-700"></li>
+                    <li><a href="#" class="bg-black text-white px-4 py-2 rounded-full ml-[-9px]">Sign up</a></li>
                 </ul>  
-                <a href="" class="ml-auto">
-                    <img src="menu.svg" alt="menu button">
-                </a>
         </header>
         <!-- mobile view -->
-        <aside class="md:hidden flex justify-between items-center px-12 py-3">
+        <aside class="hidden md:hidden flex flex-col w-3/5 bg-blue-100 absolute top-0 bottom-0 h-screen  gap-8 px-2 py-3">
             <!-- nav -->
-            <nav class="flex justify-between items-center gap-8">
+            <nav class="flex flex-col gap-8">
                 <!-- logo -->
-                <div class="flex-1 flex">
-                    <span>😇</span>
-                    <h1 class="text-3xl font-bold ">
+                <div class="flex items-center gap-2 mt-3">
+                    <span class="text-2xl">😇</span>
+                    <div class="text-2xl font-bold ">
                         Untitled UI
-                    </h1>
+                    </div>
+                <span class="ml-auto w-5 self-start mt-[-10px]">
+                    <img src="menu.svg" alt="" id="exit-btn">
+                </span>
                 </div>
                 <!-- menu -->
-                <ul class=" flex justify-around items-center gap-8">
+                <ul class="flex flex-col justify-around  gap-8">
                     <li><a href="#" class="text-teal-600">Home</a></li>
-                    <li><a href="#" class="">About</a></li>
-                    <li><a href="#" class="">Contact Us</a></li>
-                    <li><a href="#" class="px-4 py-2 bg-teal-600 text-white uppercase font-bold rounded-full">subscribe</a></li>
+                    <li><a href="#" class="">Products</a></li>
+                    <li><a href="#" class="">Resources</a></li>
+                    <li><a href="#" class="">Pricing</a></li>
+                    <!-- <li></li> -->
                 </ul>
             </nav>
             <!-- authentication / authorisation -->
-            <ul class="flex justify-between items-center gap-6">
-                <li><a href="#" class="text-gray-800">Log In</a></li>
-                <li><a href="#" class="bg-black text-white px-4 py-2 rounded-full">Sign up</a></li>
+            <ul class="flex items-center gap-4">
+                <li><a href="#" class="text-gray-800 text-lg">Log In</a></li>
+                <li class="w-1 h-8 origin-top-left rotate-12 bg-black"></li>
+                <li><a href="#" class="bg-black text-white px-4 py-2 rounded-full ml-[-9px]">Sign up</a></li>
             </ul>
         </aside>
-        
+        <!-- Hero -->
+        <section class="flex justify-between px-4 mt-14" >
+            <div class="w-1/2">
+                <h1 class="text-4xl mb-6 font-bold">Untitled Blog</h1>
+                <form action="#" method="post">
+                    <label for="email" aria-label="subscribe" class="md:w-4/5 flex flex-col  gap-y-4 md:flex-row md:rounded-full md:border md:border-solid md:justify-between">
+                        <input type="email" name="email" id="email" placeholder="Enter your email" class="flex-1 px-4 rounded-full border border-solid md:border-0 py-3">
+                        <a href="#" class="px-4 py-3 bg-black text-white uppercase font-bold rounded-full">Subscribe</a>
+                    </label>
+                </form>
+            </div>
+
+            <div class="w-1/4">
+                <p>New product features, the latest in technology, solutions, and updates.</p>
+            </div>
+        </section>
+        <script src="index.js"></script>
     </body>
 
 </html>
